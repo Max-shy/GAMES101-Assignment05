@@ -29,8 +29,7 @@ And then trace each ray in function **trace(Orig, dir, scene.get_objects())**, w
 
 This function is the key to assignment 5. Inside this function, we implement the Moller-Trumbore Algorithm.
 
-
-
+![image](https://user-images.githubusercontent.com/68177870/170151541-30d01a1d-23e0-4895-9e2b-794bf5c60e76.png)
 
 ```CPP
 bool rayTriangleIntersect(const Vector3f& v0, const Vector3f& v1, const Vector3f& v2, const Vector3f& orig, const Vector3f& dir, float& tnear, float& u, float& v)
@@ -58,11 +57,12 @@ bool rayTriangleIntersect(const Vector3f& v0, const Vector3f& v1, const Vector3f
 
 Let's take a look at the render result.
 
-<img src="E:\CG\Games\GAMES101\study report\Week2\pic\render1.png" align=mid width="70%" height="70%"/>
+![image](https://user-images.githubusercontent.com/68177870/170151721-fa3f31e7-2634-4057-a921-3d40b3055bee.png)
+
 
 I noticed that there was a problem with blue dots in the shadows.
 
-<img src="E:\CG\Games\GAMES101\study report\Week2\pic\2.png" align=mid width="70%" height="70%"/>
+![image](https://user-images.githubusercontent.com/68177870/170151746-39cd9107-c156-43b4-904b-afa7fa54f927.png)
 
 Finally, it was found that there was a precision problem when compared with 0. To solve this problem, compare the parameter with a negative number which a little less than zero.
 
@@ -78,9 +78,8 @@ if (t > minDis && b1 > minDis && b2 > minDis && (1 - b1 - b2 > minDis)) {
 
 Now, let's look at the new render results.
 
-<img src="E:\CG\Games\GAMES101\study report\Week2\pic\render2.png" align=mid width="70%" height="70%"/>
+![image](https://user-images.githubusercontent.com/68177870/170151758-6dbdf401-0d4c-4add-b66d-8a5b0316f808.png)
 
 The problem was solved perfectly.
 
-<img src="E:\CG\Games\GAMES101\study report\Week2\pic\3.png" align=mid width="70%" height="70%"/>
-
+![image](https://user-images.githubusercontent.com/68177870/170151765-01b8fd2f-2f83-4ee6-99a1-476d3590b17b.png)
