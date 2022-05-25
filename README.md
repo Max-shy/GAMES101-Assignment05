@@ -1,5 +1,5 @@
 # GAMES101-Assignment05
-Ray-Tracing(Moller-Trumbore)
+Ray-Tracing(Moller-Trumbore),determine whether the ray intersects the triangle or not.
 
 ## Assignment 05
 
